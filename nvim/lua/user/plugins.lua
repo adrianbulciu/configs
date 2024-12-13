@@ -27,10 +27,10 @@ use({
   -- 'navarasu/onedark.nvim',
   'jessarcher/onedark.nvim',
   config = function()
-    require('onedark').setup {
-      style = 'warmer'
-    }
-    require('onedark').load()
+    -- require('onedark').setup {
+    --   style = 'darker'
+    -- }
+    -- require('onedark').load()
     vim.cmd('colorscheme onedark')
 
    vim.api.nvim_set_hl(0, 'FloatBorder', {
