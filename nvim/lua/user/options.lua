@@ -42,3 +42,9 @@ vim.opt.signcolumn = 'yes:2'
 vim.opt.undofile = true -- persistent undo
 vim.opt.backup = true -- automatically save a backup file
 vim.opt.backupdir:remove('.') -- keep backups out of the current directory
+
+-- Decrease update time
+vim.opt.updatetime = 2000
+
+-- Decrease mapped sequence wait time
+vim.opt.timeoutlen = 1000
