@@ -30,7 +30,7 @@ vim.keymap.set('v', 'p', '"_dP')
 vim.keymap.set('i', ';;', '<Esc>A;')
 vim.keymap.set('i', ',,', '<Esc>A,')
 vim.keymap.set('i', '))', '<Esc>A)')
-vim.keymap.set('i', '{{', '<Esc>A{')
+vim.keymap.set('i', '{{', '<Esc>A {<Enter>}<Esc>O')
 
 -- Quickly clear search highlighting.
 -- vim.keymap.set('n', '<Leader>k', ':nohlsearch<CR>')
