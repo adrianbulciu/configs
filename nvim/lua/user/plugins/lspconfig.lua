@@ -7,6 +7,10 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- PHP
 require('lspconfig').intelephense.setup({ capabilities = capabilities })
 
+require('lspconfig').gopls.setup({ capabilities = capabilities })
+
+require('lspconfig').golangci_lint_ls.setup({ capabilities = capabilities })
+
 -- Vue, JavaScript, TypeScript
 require('lspconfig').volar.setup({
   capabilities = capabilities,
