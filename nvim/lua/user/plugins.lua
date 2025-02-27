@@ -44,14 +44,14 @@ use({
    --   bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
    -- })
 
-   vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+   -- vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
 
    vim.api.nvim_set_hl(0, 'StatusLineNonText', {
      fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
    })
 
-   vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+   -- vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = 'white' })
 
    vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#51B3EC'})
    vim.api.nvim_set_hl(0, 'LineNr', { fg='white'})
@@ -297,7 +297,7 @@ use({
       }
 
       vim.api.nvim_set_hl(0, 'TreesitterContext', { bg='#242529'})
-      vim.api.nvim_set_hl(0, 'TreesitterContextLineNumber', { fg='#FFCC00'})
+      vim.api.nvim_set_hl(0, 'TreesitterContextLineNumber', { fg='#2d759f'})
     end,
 })
 
