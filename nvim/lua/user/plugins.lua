@@ -38,6 +38,13 @@ use({
      bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
    })
 
+ vim.api.nvim_set_hl(0, 'Comment', {
+     fg = '#7e8594'
+   })
+ vim.api.nvim_set_hl(0, 'SpecialKey', {
+     fg = '#a9d957'
+   })
+
    -- Make the cursor line background invisible
    -- vim.api.nvim_set_hl(0, 'CursorLineBg', {
    --   fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
