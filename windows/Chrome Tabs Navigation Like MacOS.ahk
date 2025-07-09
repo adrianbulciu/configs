@@ -1,5 +1,7 @@
 ﻿#Requires AutoHotkey v2.0
 
+#SingleInstance Ignore ; Prevents duplicate script instances
+
 #!Left:: SwitchBrowserTab("left")
 #!Right:: SwitchBrowserTab("right")
 

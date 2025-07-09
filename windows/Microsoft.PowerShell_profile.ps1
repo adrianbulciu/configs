@@ -28,6 +28,25 @@ oh-my-posh init pwsh --config "$env:MY_POSH_THEMES_PATH\zash.omp.json" | Invoke-
 #     Set-Alias -Name $AliasName -Value $funcName -Option AllScope -Force
 # }
 
+Register-ArgumentCompleter -Native -CommandName ssh -ScriptBlock {
+    param($wordToComplete, $commandAst, $cursorPosition)
+    
+    $sshConfigPath = "$HOME\.ssh\config"
+    if (-Not (Test-Path $sshConfigPath)) { return }
+
+    Get-Content $sshConfigPath |
+        Where-Object { $_ -match '^\s*Host\s+' } |
+        ForEach-Object {
+            ($_ -replace '^\s*Host\s+', '') -split '\s+' 
+        } |
+        Where-Object { $_ -like "$wordToComplete*" } |
+        ForEach-Object {
+            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+        }
+}
+
+Remove-Item alias:curl
+
 function Open-Project-Tabs {
     $directories = @(
             "D:\projects\web-test",
